@@ -38,7 +38,7 @@ class App {
 
 	_getPosition() {
 		if (navigator.geolocation) {
-			const teste = navigator.geolocation.getCurrentPosition(this._loadMap.bind(this), function () {
+			navigator.geolocation.getCurrentPosition(this._loadMap.bind(this), function () {
 				alert('Could not get your position');
 			});
 		}
